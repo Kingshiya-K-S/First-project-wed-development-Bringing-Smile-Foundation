@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>register</title>
+</head>
+<body background="https://expertphotography.b-cdn.net/wp-content/uploads/2019/01/brooke-lark-158017-unsplash-1500-1-1024x767.jpg">
+<left>
+<img src="C:\Users\USER\OneDrive\Desktop\Project\images\logo1.png" alt="logo" align="left" width="200" height="250"/>
+</left>
+<script>
+function msg() {
+            var eventname = document.myform.eventname.value;
+            if (eventname == null || eventname == '') {
+                alert("Eventname can't be blank");
+                return false;
+            }
+             var venue = document.myform.venue.value;
+            if (venue == null || venue == '') {
+                alert("Venue can't be blank");
+                return false;
+            }
+            var contact = document.myform.contact.value;
+            if (contact == null || contact == '') {
+                alert("Contact can't be blank");
+                return false;
+            }
+            var food_available = document.myform.food_available.value;
+            if (food_available == null || food_available == '') {
+                alert("Food Available can't be blank");
+                return false;
+            }
+            var food_type = document.myform.food_type.value;
+            if (food_type == null || food_type == '') {
+                alert("Food Type can't be blank");
+                return false;
+            }
+
+            var date = document.myform.date.value;
+            if (date == null || date == '') {
+                alert("Date can't be blank");
+                return false;
+            }
+        var name = document.myform.name.value;
+        var password = document.myform.password.value;
+        if (name == null || name == '') {
+          alert("Name can't be blank");
+          return false;
+        } else if (password.length < 6) {
+          alert('Password must be at least 6 characters long.');
+          return false;
+        }
+
+}
+</script>
+<center>
+<h1>REGISTRATION FORM</h1>
+<form name="myform">
+<table border="0" align="center">
+
+<tr>
+  <td><label for="eventname">Name of the event:</label></td>
+  <td>
+    <select name="eventname">
+      <option value="event name">event name</option>
+      <option value="marriage house">marriage house</option>
+      <option value="birthday party">birthday party</option>
+      <option value="government event">government events</option>
+      <option value="religious functions">religious functions</option>
+      <option value="other events">other events</option>
+    </select>
+  </td>
+</tr>
+
+<tr>
+  <td><label>Venue of the program:</label></td>
+  <td><input type="text" name="venue" /></td>
+</tr>
+
+<tr>
+  <td><label>Contact:</label></td>
+  <td><input type="tel" name="contact" size="10" /></td>
+</tr>
+
+<tr>
+  <td><label>Food available:</label></td>
+  <td><input type="text" name="food_available" size="20" /></td>
+</tr>
+
+<tr>
+  <td><label>Food type:</label></td>
+  <td>
+    <input type="radio" id="veg" name="food_type" value="veg" />veg
+    <input type="radio" id="non-veg" name="food_type" value="non-veg" />non-veg
+  </td>
+</tr>
+
+<tr>
+  <td><label>Date:</label></td>
+  <td><input type="date" id="date" name="date" /></td>
+</tr>
+
+<tr>
+  <td>Username:</td>
+  <td><input type="text" name="name" placeholder="Enter username"></td>
+</tr>
+
+<tr>
+  <td>Password:</td>
+  <td><input type="password" name="password" placeholder="Enter password"></td>
+</tr>
+
+<tr>
+  <td><input type="submit" value="Submit" onclick="msg()"></td>
+  <td><input type="reset" value="Reset"></td>
+</tr>
+
+</table>
+</form>
+
+<a href="forget password.html">Forgot password?</a>
+<br>
+<a href="register here.html">Register here</a>
+</center>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<script>
+function msg() {
+    var eventname = document.myform.eventname.value;
+    if (eventname == null || eventname == '') {
+        alert("Event name can't be blank");
+        return false;
+    }
+    var venue = document.myform.venue.value;
+    if (venue == null || venue == '') {
+        alert("Venue can't be blank");
+        return false;
+    }
+    var contact = document.myform.contact.value;
+    if (contact == null || contact == '') {
+        alert("Contact can't be blank");
+        return false;
+    }
+    var food_available = document.myform.food_available.value;
+    if (food_available == null || food_available == '') {
+        alert("Food Available can't be blank");
+        return false;
+    }
+    var food_type = document.myform.food_type.value;
+    if (food_type == null || food_type == '') {
+        alert("Food Type can't be blank");
+        return false;
+    }
+
+    var date = document.myform.date.value;
+    if (date == null || date == '') {
+        alert("Date can't be blank");
+        return false;
+    }
+    var username = document.myform.username.value;
+    var password = document.myform.password.value;
+    if (username == null || username == '') {
+        alert("User name can't be blank");
+        return false;
+    } else if (password.length < 6) {
+        alert('Password must be at least 6 characters long.');
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body style="background-image: url('https://wallpaperaccess.com/full/1769054.gif')">
+<center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>REGISTRATION FORM</h1>
+<form name="myform" action="register.jsp" onsubmit="return msg();">
+<table border="0" align="center">
+
+<tr>
+  <td><label for="eventname">Name of the event:</label></td>
+  <td>
+    <select name="eventname">
+      <option value="other events">Other events</option>
+      <option value="marriage house">Marriage house</option>
+      <option value="birthday party">Birthday party</option>
+      <option value="government event">Government events</option>
+      <option value="religious functions">Religious functions</option>
+       <option value="event name">Event name</option>
+    </select>
+  </td>
+</tr>
+
+<tr>
+  <td><label>Venue of the program:</label></td>
+  <td><input type="text" name="venue" /></td>
+</tr>
+
+<tr>
+  <td><label>Contact:</label></td>
+  <td><input type="tel" name="contact" size="10" /></td>
+</tr>
+
+<tr>
+  <td><label>Food available:</label></td>
+  <td><input type="text" name="food_available" size="20" /></td>
+</tr>
+
+<tr>
+  <td><label>Food type:</label></td>
+  <td>
+    <input type="radio" id="veg" name="food_type" value="veg" />Veg
+    <input type="radio" id="non-veg" name="food_type" value="non-veg" />Non-veg
+  </td>
+</tr>
+
+<tr>
+  <td><label>Date:</label></td>
+  <td><input type="date" id="date" name="date" /></td>
+</tr>
+
+<tr>
+  <td>Username:</td>
+  <td><input type="text" name="username" placeholder="Enter username"></td>
+</tr>
+
+<tr>
+  <td>Password:</td>
+  <td><input type="password" name="password" placeholder="Enter password"></td>
+</tr>
+
+<tr>
+     <td><input type="reset" value="Reset"></td>
+  <td><input type="submit" value="Submit"></td>
+</tr>
+
+</table>
+</form>
+
+<button><a href="forget-password.html">Forgot password</a></button>
+<br><br>
+<button><a href="loginpage.jsp.">Login here</a></button>
+<br>
+</center>
+</body>
+</html>

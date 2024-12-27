@@ -1,0 +1,132 @@
+<html>
+
+<head>
+</head>
+
+<body background="https://static.vecteezy.com/system/resources/previews/002/007/760/original/abstract-summer-and-spring-trendy-artistic-background-template-vector.jpg">
+    <h1 align="center"><u>BRINGING SMILE FOUNDATION</u></h1>
+    <br />
+    <script>
+        function msg() {
+            var name = document.myform.name.value;
+            if (name == null || name == '') {
+                alert("Name can't be blank");
+                return false;
+            }
+            var address = document.myform.address.value;
+            if (address == null || address == '') {
+                alert("Address can't be blank");
+                return false;
+            }
+            var contact = document.myform.contact.value;
+            if (contact == null || contact == '') {
+                alert("Phone number can't be blank");
+                return false;
+            }
+            var no_of_people = document.myform.no_of_people.value;
+            if (no_of_people == null || no_of_people == '') {
+                alert("Number of people can't be blank");
+                return false;
+            }
+            var no_of_nonveg = document.myform.no_of_nonveg.value;
+            if (no_of_nonveg == null || no_of_nonveg == '') {
+                alert("Number of non-veg can't be blank");
+                return false;
+            }
+            var no_of_veg = document.myform.no_of_veg.value;
+            if (no_of_veg == null || no_of_veg == '') {
+                alert("Number of veg can't be blank");
+                return false;
+            }
+            var transport = document.myform.transport.value;
+            if (transport == null || transport == '') {
+                alert("Transport availability can't be blank");
+                return false;
+            }
+            var username = document.myform.username.value;
+            if (username == null || username == '') {
+                alert("Username can't be blank");
+                return false;
+            }           
+            var password = document.myform.password.value;
+            if (password == null || password == '') {
+                alert("Password can't be blank");
+                return false;
+            }
+               if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <form name="myform" action="oldagedata.jsp">
+        <table border="0" align="center">
+            <tr>
+                <td colspan="2" align="center">
+                    <h1>OLD AGE HOME REGISTRATION</h1>
+                </td>
+            </tr>
+            <tr>
+                <th><b>Name of the old-age home</b></th>
+                <td>
+                    <input type="text" name="name" placeholder="Enter old-age home name" />
+                </td>
+            </tr>
+            <tr>
+                <th><br />No of people</th>
+                <td>
+                    <input type="number" name="no_of_people" size="4" placeholder="Enter no of people" />
+                </td>
+            </tr>
+            <tr>
+                <th><br /><label>Address</label></th>
+                <td>
+                    <textarea cols="50" rows="4" name="address" placeholder="Enter the address"></textarea><br />
+                </td>
+            </tr>
+            <tr>
+                <th><br /><label>Mobile no</label></th>
+                <td>
+                    <input type="number" name="contact" size="15" placeholder="Enter mobile no" />
+                </td>
+            </tr>
+            <tr>
+                <th><br /><label>No of Non-veg</label></th>
+                <td>
+                    <input type="number" name="no_of_non_veg" />
+                </td>
+            </tr>
+            <tr>
+                <th><br /><label>No of Veg</label></th>
+                <td>
+                    <input type="number" name="no_of_veg" />
+                </td>
+            </tr>
+<tr>
+               <th><label>Own transport availability</label></th>
+                <td><input type="radio" id="Yes" name="transport" value="Yes" />YES
+                    <input type="radio" id="No" name="transport" value="No" />NO
+                </td>
+            </tr>
+             <tr>
+    <th>Username</th>
+    <td><input type="text" name="username" placeholder="Enter name"></td>
+  </tr>
+  <tr>
+    <th><br>Password</th>
+    <td><input type="password" name="password" placeholder="Enter password"></td>
+  </tr>
+
+ <tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="Reset" />
+                    <input type="submit" value="Submit" onclick="return msg()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

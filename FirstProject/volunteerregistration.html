@@ -1,0 +1,120 @@
+<html>
+<head>
+  <title>volunteer</title>
+</head>
+<body>
+<script>
+  function validateform() {
+    var yourname = document.myform.yourname.value;
+    if (yourname == null || yourname == '') {
+      alert("Name can't be blank");
+      return false;
+    }
+    
+    var address = document.myform.address.value;
+    if (address == null || address == '') {
+      alert("Address can't be blank");
+      return false;
+    }
+    
+    var pincode = document.myform.pincode.value;
+    if (pincode == null || pincode == '') {
+      alert("Pincode can't be blank");
+      return false;
+    }
+    
+    var phonenumber = document.myform.phonenumber.value;
+    if (phonenumber == null || phonenumber == '') {
+      alert("Phone number can't be blank");
+      return false;
+    }
+
+    var name = document.myform.name.value;
+    var password = document.myform.password.value;
+    if (name == null || name == '') {
+      alert("Username can't be blank");
+      return false;
+    } else if (password.length < 6) {
+      alert('Password must be at least 6 characters long.');
+      return false;
+    }
+
+     var vehicle = document.myform.vehicle.value;
+     if (vehicle == null || vehicle == '') {
+      alert("Vehicle number can't be blank");
+      return false;
+    }
+
+  }
+</script>
+
+<style>
+  body {
+    background-image: url('https://cdn.pixabay.com/photo/2015/01/16/16/50/volunteers-601662_1280.jpg');
+    background-size: cover;
+  }
+</style>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+<h1 align="center"><u>Volunteer Registration</u></h1>
+<form name="myform" onsubmit="return validateform()">
+  <table border="0" height="50%" align="center" style="width: 50%; height: 62%; font-size: 25px">
+    <tr>
+      <th>Name</th>
+      <th>
+        <input type="text" name="yourname" placeholder="Enter your name" />
+      </th>
+    </tr>
+
+    <tr>
+      <th>Address</th>
+      <th>
+        <textarea cols="40" rows="4" name="address" placeholder="Enter your address"></textarea>
+      </th>
+    </tr>
+
+    <tr>
+      <th>Pin Code</th>
+      <th>
+        <input type="number" name="pincode" placeholder="Enter your pincode" />
+      </th>
+    </tr>
+
+    <tr>
+      <th>Phone Number</th>
+      <th>
+        <input type="number" name="phonenumber" placeholder="Enter your Phone number" />
+      </th>
+    </tr>
+
+    <tr>
+      <th>Username</th>
+      <th>
+        <input type="text" name="name" placeholder="Enter username" />
+      </th>
+    </tr>
+
+    <tr>
+      <th>Password</th>
+      <th>
+        <input type="password" name="password" placeholder="Enter your password" />
+      </th>
+    </tr>
+
+    <tr>
+      <th>Valid for Two/Four wheeler?</th>
+      <th>
+        <input type="radio" name="vehicle" value="yes" />
+        <label for="yes-valid">Yes</label>
+        <input type="radio" name="vehicle" value="no" />
+        <label for="no-valid">No</label>
+      </th>
+    </tr>
+    <tr align="center">
+      <td><input type="reset" value="Reset" /></td>
+      <td><input size="70px" type="submit" value="Submit" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

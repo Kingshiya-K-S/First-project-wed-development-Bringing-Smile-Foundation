@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>orphanage</title>
+</head>
+<br>
+<h1>
+    <center>ORPHANAGE REGISTRATION</center>
+</h1>
+</br>
+
+<body background="https://img.freepik.com/free-vector/happy-children-jumping-summer-meadow_74855-5852.jpg?w=2000">
+<left>
+<img src="logo1.png" alt="logo" align="left" width="400" height="400"/>
+</left>
+<script>
+function msg(){
+ var name = document.myform.name.value;
+        if (name == null || name == '') {
+          alert("Name can't be blank");
+          return false;
+        }
+var address = document.myform.address.value;
+if (address == null || address == '')
+{
+alert("Address can't be blank")
+}
+var number = document.myform.number.value;
+if (number == null || number == '')
+{
+alert("Ph no. can't be blank")
+}
+var num = document.myform.num.value;
+if (num == null || num == '')
+{
+alert("No of people can't be blank")
+}
+var nonveg = document.myform.nonveg.value;
+if (nonveg == null || nonveg  == '')
+{
+alert("No of non veg can't be blank")
+}
+var veg = document.myform.veg.value;
+if (veg == null || veg  == '')
+{
+alert("No of veg can't be blank")
+}
+var transport = document.myform.transport.value;
+if (transport == null || transport  == '')
+{
+alert("Own transport avalability can't be blank")
+}
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+if (name==null || name==""){  
+alert("Name can't be blank");  
+return false;  
+}else if(password.length<6){  
+alert("Password must be at least 6 characters long.");  
+return false;  
+}  
+}
+</script>
+        <form name="myform" action="orphanagedata.jsp">
+        <table border=0 align="center">
+            <tr>
+                <th><label>Name of the Orphanage</label></th>
+                <td><input type="text" name="name" size="16" placeholder="Enter name of the orphanage"/></td>
+            </tr>
+            <tr>
+                <th><br><label>Address</label></th>
+                <td><textarea cols="40" rows="4"   value="address" name="address"placeholder="Enter address"></textarea></br>
+                </td>
+            </tr>
+            <tr>
+                <th><br><label>Contact no</label></th>
+ 
+
+               <td><input type="number" name="contact"placeholder="Enter contact no"/></br>
+                </td>
+            </tr>
+            <tr>
+                <th><br><label>No of People</label></th>
+                <td><input type="number" name="no_of_people" placeholder="Enter the no of people"/></br>
+                </td>
+            </tr>
+            <tr>
+                <th><br><label>No of Non-veg</label></th>
+                <td><input type="number" name="no_of_non_veg" placeholder="Non-veg"/></br>
+                </td>
+            </tr>
+            <tr>
+                <th><br><label>No of Veg</label></th>
+                <td><input type="number" name="no_of_veg"placeholder="Veg" /></td>
+            </tr>
+            <tr>
+                <th><br><label>Own transport availability</label></th>
+                <td><input type="radio" id="Yes" name="transport" value="Yes" />Yes
+                    <input type="radio" id="No" name="transport" value="No" />No</br>
+                </td>
+            </tr>
+<tr>
+    <th>USERNAME</th>
+    <td><input type="text" name="username" placeholder="Enter username"></td>
+  </tr>
+  <tr>
+</br>
+</br>
+    <th>PASSWORD</th>
+    <td><input type="password" name="password" placeholder="Enter password"></td>
+  </tr>
+            <tr align="center">
+                <td><input size="70px" type="submit" value="Submit" onclick="msg()"/></br>
+                </td>
+                <td><input type="reset" value="reset" /></br>
+                </td>
+            </tr>
+            </center>
+</table>
+    </form>
+</body>
+
+</html>

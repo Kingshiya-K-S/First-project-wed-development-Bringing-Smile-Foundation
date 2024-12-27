@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Volunteer_reference</title>
+</head>
+
+<body background="https://www.teahub.io/photos/full/225-2257321_light-blue-blur-background.jpg">
+    </br>
+    </br>
+    <center>
+        <h1>VOLUNTEER REFERENCE</h1>
+    </center>
+    <script>
+       function msg(){
+        var date = document.myform.date.value;
+            if (date == null || date == '') {
+                alert("Date can't be blank");
+                return false;
+            }
+         }
+    </script>
+    
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <table border=0 align="center">
+        <form name="myform">
+                <tr>
+                     <td><label>Date:</label></td>
+                     <td><input type="date" name="date" /></td>
+                </tr>
+            <tr>
+                <td><input type="submit" value="Submit" onclick="msg()"></td>
+                <td><input type="reset" value="Reset">
+                </td>
+            </tr>
+    </table>
+    </form>
+</body>
+
+</html>
